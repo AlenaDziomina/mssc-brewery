@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
 @Getter
@@ -20,6 +21,11 @@ public class Beer {
     private String beerName;
     private BeerStyleEnum beerStyle;
     private Long upc;
+//    @CreationTimestamp
+//    @Column(updatable = false)
+    private Timestamp createdDate;
+//    @UpdateTimestamp
+    private Timestamp lastModifiedDate;
 
 }
 
