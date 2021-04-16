@@ -43,7 +43,7 @@ public class CustomerController {
     @PutMapping("/{customerId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void handleUpdate(@PathVariable("customerId") UUID customerId, @Valid @RequestBody CustomerDto customerDto) {
-        customerService.updateBeer(customerId, customerDto);
+        customerService.updateCustomer(customerId, customerDto);
     }
 
     @DeleteMapping("/{customerId}")

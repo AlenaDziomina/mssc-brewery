@@ -23,7 +23,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void updateBeer(UUID customerId, CustomerDto customerDto) {
+    public void updateCustomer(UUID customerId, CustomerDto customerDto) {
         log.info("Update customer...");
     }
 
