@@ -3,14 +3,12 @@ package guru.springframework.msscbrewery.web.controller.v2;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import guru.springframework.msscbrewery.web.model.v2.BeerDtoV2;
 import guru.springframework.msscbrewery.web.service.v2.BeerServiceV2;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.UUID;
@@ -28,7 +26,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 
-@RunWith(SpringRunner.class)
 @WebMvcTest(BeerControllerV2.class)
 public class BeerControllerV2Test {
 
@@ -43,7 +40,7 @@ public class BeerControllerV2Test {
 
     BeerDtoV2 validBeer;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         validBeer = BeerDtoV2.builder().id(UUID.randomUUID())
                 .beerName("Beer2")
